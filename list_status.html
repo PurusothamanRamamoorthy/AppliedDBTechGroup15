@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+   <body>
+      <h1>Flight Info</h1>
+
+      <table border = 1>
+         <thead>
+            <td>flight_num</td>
+            <td>org_airport</td>
+            <td>dest_airport</td>
+            <td>Status</td>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row["flight_num"]}}</td>
+               <td>{{row["org_airport"]}}</td>
+               <td> {{ row["dest_airport"]}}</td>
+               <td>{{row['status']}}</td>	
+            </tr>
+         {% endfor %}
+      </table>
+      
+      <a href = "/">Go back to home page</a>
+      
+   </body>
+</html>
